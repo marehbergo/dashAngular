@@ -1,0 +1,33 @@
+<aside id="sidebar">
+    <div class="sidenav-outer">
+        <div class="menu-body">
+            <ul class="nav nav-pills nav-stacked sidenav">
+                <li>
+                    <a [routerLink]="['home']" class="website-name" style="letter-spacing: 1px">
+                        Sistema Acadêmico
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['home']" class="logo">
+                        <img src="assets/images/assinatura_bco_outline.png" class="logo" style="height: 140px; margin: 0 auto"/>
+                        <p class="text-xs-center">Nome do Usuário</p>
+                    </a>
+                </li>
+                <li class="nested" [ngClass]="{'expand' : showMenu === 'pages' }">
+                    <a (click)="addExpandClass('pages')"><i class="fas fa-sort-down"></i><span>&nbsp;&nbsp; Páginas</span></a>
+                    <ul class="submenu">
+                        <li>
+                            <a [routerLink]="['home']"><span>Aluno</span></a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['blankpage']"><span>Secretário</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a [routerLink]="['']"><i class="fas fa-sign-out-alt"></i><span>&nbsp;&nbsp; Sair</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
